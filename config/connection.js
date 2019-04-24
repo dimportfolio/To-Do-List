@@ -1,17 +1,17 @@
-const mysql = require("mysql");
+var mysql = require("mysql");
+var connection;
 
-let connection = mysql.createConnection({
-    host : "localhost",
-    user : "root",
-    PORT : 3306,
-    password : "Danielim!@#1994",
-    database : "tasks"
-})
+if(process.env.JAWSDB_URL){
+ connection =mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+ connection = mysql.createConnection({
+   host:"localhost",
+   user: "root",
+   password: "Danielim!@#1994",
+   database: "tasks"
+ });
+}
 
-connection.connect(function(err){
-    if (err) throw err;
-
-    console.log("connection was successful " + connection.threadId);
-})
+connection.connect();
 
 module.exports = connection;
