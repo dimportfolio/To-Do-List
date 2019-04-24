@@ -7,5 +7,6 @@ USE tasks;
 CREATE TABLE todo(
     id INT NOT NULL AUTO_INCREMENT,
     task VARCHAR(45),
+    status BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );

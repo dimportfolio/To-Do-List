@@ -1,8 +1,8 @@
-INSERT INTO todo (task)
-VALUES ("brush teeth");
+INSERT INTO todo (task, status)
+VALUES ("brush teeth", false);
 
 INSERT INTO todo (task)
-VALUES ("shower");
+VALUES ("shower", false);
 
 INSERT INTO todo (task)
-VALUES ("eat");
+VALUES ("eat", false);

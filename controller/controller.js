@@ -5,7 +5,7 @@ const router = express.Router();
 const model = require("../model/model.js");
 
 router.get("/", function(req, res){
-    model.all(function(result) {
+    model.read(function(result) {
         var object = {
             tasks: result
         }
@@ -15,10 +15,11 @@ router.get("/", function(req, res){
 });
 
 router.post("/api/tasks", function(req, res){
+
     model.create([
         "task", "status" 
     ], [
-        req.body.name, req.body.status
+        req.body.task, req.body.status
     ], function(result){
         res.json({id: result.insertId});
     });
@@ -53,3 +54,5 @@ router.delete("/api/tasks/:id", function(req, res) {
       }
     });
   });
+
+module.exports = router;

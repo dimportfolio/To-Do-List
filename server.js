@@ -21,7 +21,7 @@ app.set("view engine", "handlebars");
 //allows us to use the controller.js with our routes
 app.use(routes);
 
-app.listen(PORT, function(){
+app.listen(PORT, function(err){
     if(err)throw err;
     console.log("Server listening on http://localhost:" + PORT);
 })
