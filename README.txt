@@ -1,0 +1,1 @@
+a todo application demonstrating knowledge with ORM's, mySQL, Node, HTML, JS, and handlebars
